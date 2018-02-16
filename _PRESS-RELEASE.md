@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Playlist Maker with Album Art Views
+  > Webcomic Album Generator
 
 ## Sub-Heading ##
-  > A simple playlist to add favorite songs to
+  > A simple app to view an album of related web comics
 
 ## Summary ##
-  > Users can search for songs, add songs to their playlist, and view the album art for every song. Their playlists will be saved in a database for future retrieval.
+  > Users can view a funny web comic and others of the same topic
 
 ## Problem ##
-  > A simple
+  > XKCD comics are by default arranged in chronological view, not in category or topic views.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Allow users to view web comics in albums instead
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "Thanks for all the support"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just click and go
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "I will never see web comcis the same way again"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Head to XKCD.com for more web comics
