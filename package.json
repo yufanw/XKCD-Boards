@@ -1,0 +1,31 @@
+{
+  "name": "mvp",
+  "version": "1.0.0",
+  "author": "Yufan Wang",
+  "description": "Generates a random web comic with a song that matches",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yufanw/MVP.git"
+  },
+  "keywords": [
+    "xkcd",
+    "youtube"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yufanw/MVP/issues"
+  },
+  "dependencies": {
+    "angular": "^1.6.9",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "mocha": "^5.0.1",
+    "mongo": "^0.1.0",
+    "node": "^9.5.0",
+    "underscore": "^1.8.3"
+  }
+}
