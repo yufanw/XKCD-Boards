@@ -21,7 +21,7 @@ mongoose.connect('mongodb://localhost:27017/comics', function(err) {
 
 
 app.get('/', function(req, res) {
-  res.send('Hello World');
+  res.send('Hello');
 });
 
 app.post('/comics', function(req, res) {

@@ -26,10 +26,10 @@ Once the project moves into development, the press release can be used as a touc
   > Users can view a funny web comic and others of the same topic
 
 ## Problem ##
-  > XKCD comics are by default arranged in chronological view, not in category or topic views.
+  > XKCD comics are by default arranged in chronological view, with no way to comment
 
 ## Solution ##
-  > Allow users to view web comics in albums instead
+  > Allow users to view web comics in self created albums instead
 
 ## Quote from You ##
   > "Thanks for all the support"
