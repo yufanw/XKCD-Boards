@@ -11,7 +11,7 @@ var appRoutes = require('./app/routes/api')(router);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/api', appRoutes);
+app.use(appRoutes);
 
 mongoose.connect('mongodb://localhost:27017/comics', function(err) {
   if (err) {

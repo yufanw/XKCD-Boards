@@ -1,27 +1,17 @@
 var Comic = require('../models/comics');
+var xkcd = require('../helpers/xkcd');
 
 module.exports = function(router) {
   router.post('/', function(req, res) {
-    xkcd.random(function(err, result) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(result);
-        var comic = new Comic()
-        comic.img = result.body.img;
-        comic.num = result.body.num;
-        comic.title = result.body.title;
-        comic.year = result.body.year;
-        comic.save(function(err) {
-          if (err) {
-            res.send('Comic already exists');
-          } else {
-            res.send('Comic created');
-          }
-        });
-      }
+    xkcd.random(function(result) {
+      Comic.save(JSON.stringify(result));
+      res.send('Random comic: ' + JSON.stringify(result.title));
     });
   });
 
+  router.get('/', function(req, res) {
+    res.send('Hello world');
+  });
+
   return router;
-}
+};
