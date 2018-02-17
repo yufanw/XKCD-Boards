@@ -16,7 +16,8 @@ let save = function(comic) {
     img: comic.img,
     num: comic.num,
     title: comic.title,
-    year: comic.year
+    year: comic.year,
+    alt: comic.alt
   }
 
   Comic.create(newComic, function(err) {
