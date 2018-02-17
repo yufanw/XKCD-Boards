@@ -2,7 +2,7 @@
   "name": "mvp",
   "version": "1.0.0",
   "author": "Yufan Wang",
-  "description": "Generates a random web comic with a song that matches",
+  "description": "Generates a random web comic",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -12,8 +12,7 @@
     "url": "git+https://github.com/yufanw/MVP.git"
   },
   "keywords": [
-    "xkcd",
-    "youtube"
+    "xkcd"
   ],
   "license": "ISC",
   "bugs": {

@@ -10,7 +10,6 @@ angular.module('app', [])
   this.getcomic = getComic;
 
   this.setNewComic = (comic) => {
-    console.log('Setting comic');
     this.currentComic = comic;
   }
 })
@@ -22,9 +21,12 @@ angular.module('app', [])
         <h5>XKCD Randomizer</h5>
       </div>
       <button class="btn btn-primary"
+        ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
+      >Latest</button>
+      <button class="btn btn-primary"
         ng-click="$ctrl.getcomic.getRandom($ctrl.setNewComic)"
       >Random</button>
-      <button class="btn btn-primary">Add to Album</button>
+      <button class="btn btn-primary">Add comment</button>
       <comics-view comic="$ctrl.currentComic"></comics-view>
     </div>
   `

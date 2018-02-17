@@ -17,19 +17,19 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Webcomic Album Generator
+  > Webcomic Viewer
 
 ## Sub-Heading ##
-  > A simple app to view an album of related web comics
+  > A simple app to view an album of web comics
 
 ## Summary ##
-  > Users can view a funny web comic and others of the same topic
+  > Users can view latest and random web comics
 
 ## Problem ##
   > XKCD comics are by default arranged in chronological view, with no way to comment
 
 ## Solution ##
-  > Allow users to view web comics in self created albums instead
+  > Allow users to view web comics in self created albums instead, and leave comments for the comics
 
 ## Quote from You ##
   > "Thanks for all the support"
