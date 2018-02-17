@@ -5,8 +5,7 @@
   "description": "Generates a random web comic with a song that matches",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "test"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
     "angular": "^1.6.9",
     "express": "^4.16.2",
     "mongoose": "^5.0.6",
+    "morgan": "^1.9.0",
     "node": "^9.5.0",
     "underscore": "^1.8.3"
   }
