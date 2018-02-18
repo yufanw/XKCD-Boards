@@ -8,10 +8,16 @@ angular.module('app', [])
     alt: 'My new language is great, but it has a few quirks'
   };
   this.getcomic = getComic;
+  this.commentText = '';
 
   this.setNewComic = (comic) => {
     this.currentComic = comic;
   }
+
+  this.addComment = (text) => {
+    this.getcomic.postComment(this.commentText)
+  }
+
 })
 .component('appMain', {
   controller: 'AppCtrl',

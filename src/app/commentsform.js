@@ -7,5 +7,6 @@ angular.module('app')
       ></textarea>
       <button class="btn btn-comment">Add comment</button>
     </div>
+    <pre>{{$ctrl.commentText}}</pre>
   `
 });

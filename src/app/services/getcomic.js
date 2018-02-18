@@ -1,5 +1,3 @@
-var XKCD = 'http://xkcd.com';
-
 var uri = window.location.href;
 
 angular.module('app')
@@ -7,7 +5,7 @@ angular.module('app')
   this.getRandom = function(cb) {
     $http({
       method: "GET",
-      url: uri + "api/random",
+      url: uri + "api/random"
     }).then(function success(result) {
       cb(result.data);
     }, function error(result) {
@@ -18,7 +16,19 @@ angular.module('app')
   this.getLatest = function(cb) {
     $http({
       method: "GET",
-      url: uri + "api/latest",
+      url: uri + "api/latest"
+    }).then(function success(result) {
+      cb(result.data);
+    }, function error(result) {
+      console.log('error', result);
+    });
+  };
+
+  this.postComment = function(text, cb) {
+    $http({
+      method: "POST",
+      text: text,
+      url: uri + "api/comments"
     }).then(function success(result) {
       cb(result.data);
     }, function error(result) {

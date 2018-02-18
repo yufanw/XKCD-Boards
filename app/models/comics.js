@@ -6,7 +6,7 @@ var ComicSchema = new Schema({
   num: {type: Number, unique: true},
   title: String,
   year: String
-})
+});
 
 let Comic = mongoose.model('Comic', ComicSchema);
 
