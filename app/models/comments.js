@@ -10,7 +10,7 @@ let Comment = mongoose.model('Comment', CommentSchema);
 
 module.exports = {
   getComments: function(req, callback) {
-    console.log(req);
+    console.log(req.query, req.params);
     Comment.find({comic_id: req.query.num}, function(err, comments) {
       if (err) {
         console.log('Error getting comments');
