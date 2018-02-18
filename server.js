@@ -13,8 +13,7 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(__dirname + '/src'));
 app.use(appRoutes);
 
 mongoose.connect('mongodb://localhost:27017/comics', function(err) {
