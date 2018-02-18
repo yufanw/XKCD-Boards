@@ -7,17 +7,39 @@ h5 {
   font-family:Lobster;
 }
 
-div.comicimg {
-  width:500px;
-  height:500px;
-  border:1px solid black;
+button {
+  min-width:150px;
+  max-width:150px;
+  min-height:40px;
+  max-height:40px;
 }
 
-div.comicimg img {
-  display:block;
+div.comics {
+  margin:25px;
+}
+
+div.imgContainer {
+  border: 1px solid black;
+  height: 500px;
+  width: 600px;
+  align-content:center;
+  position:relative;
+}
+
+div.commentsform {
+  margin-top:30px;
+
+}
+
+img.imgComic {
+  position: absolute;
   margin: auto;
-  max-width:100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   max-height:100%;
+  max-width:100%;
 }
 
 textarea {
@@ -30,6 +52,10 @@ textarea {
 }
 
 .btn-comment {
+  border-radius:.25rem;
+  color:white;
+  background-color:#007bff;
+  border-color:#007bff;
   margin:0 auto;
   display:block;
   margin-top:5px;

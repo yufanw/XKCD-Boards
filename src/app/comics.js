@@ -6,8 +6,8 @@ angular.module('app')
   template: `
     <div class="comics">
       <div>
-        <div class="comicimg">
-          <img ng-src={{$ctrl.comic.img}}></img>
+        <div class="imgContainer">
+          <img class="imgComic" ng-src={{$ctrl.comic.img}}></img>
         </div>
         <div>
           <h2>{{$ctrl.comic.title}}</h3>

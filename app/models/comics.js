@@ -22,7 +22,7 @@ let save = function(comic) {
 
   Comic.create(newComic, function(err) {
     if (err) {
-      console.log('Error creating comic', err);
+      console.log('Comic already exists in database');
     } else {
       console.log('Saved new comic');
     }
