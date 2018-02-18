@@ -19,6 +19,8 @@
     "url": "https://github.com/yufanw/MVP/issues"
   },
   "dependencies": {
+    "@angular/cli": "^1.7.0",
+    "@angular/compiler-cli": "^5.2.5",
     "angular": "^1.6.9",
     "bootstrap": "^4.0.0",
     "cors": "^2.8.4",
