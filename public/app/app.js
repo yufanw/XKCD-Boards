@@ -17,17 +17,27 @@ angular.module('app', [])
   controller: 'AppCtrl',
   template: `
     <div>
-      <div class = 'page-header'>
-        <h5>XKCD Randomizer</h5>
-      </div>
-      <button class="btn btn-primary"
-        ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
-      >Latest</button>
-      <button class="btn btn-primary"
-        ng-click="$ctrl.getcomic.getRandom($ctrl.setNewComic)"
-      >Random</button>
-      <button class="btn btn-primary">Add comment</button>
-      <comics-view comic="$ctrl.currentComic"></comics-view>
+      <nav class="navbar">
+        <div class="col-md-6 col-md-offset-3">
+          <h5>XKCD Randomizer</h5>
+          <button class="btn btn-primary"
+            ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
+          >Latest</button>
+          <button class="btn btn-primary"
+            ng-click="$ctrl.getcomic.getRandom($ctrl.setNewComic)"
+          >Random</button>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-md-7">
+          <comics-view
+            comic="$ctrl.currentComic"
+          ></comics-view>
+        </div>
+        <div class="col-md-5">
+          <comments-form></comments-form>
+        </div>
+      <div>
     </div>
   `
 });
