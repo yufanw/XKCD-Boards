@@ -9,8 +9,9 @@ var CommentSchema = new Schema({
 let Comment = mongoose.model('Comment', CommentSchema);
 
 module.exports = {
-  getComments: function(num, callback) {
-    Comment.find({comic_id: num}, function(err, comments) {
+  getComments: function(req, callback) {
+    console.log(req);
+    Comment.find({comic_id: req.query.num}, function(err, comments) {
       if (err) {
         console.log('Error getting comments');
       } else {
@@ -20,7 +21,6 @@ module.exports = {
   },
 
   saveComment: function(comment) {
-    console.log(comment);
     var newComment = {
       text: comment.query.text,
       comic_id: comment.query.comic_id

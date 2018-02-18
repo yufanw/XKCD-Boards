@@ -25,7 +25,7 @@ module.exports = function(router) {
   });
 
   router.get('/comments', function(req, res) {
-    Comment.getComments(req.query.comic_id, function(result) {
+    Comment.getComments(req, function(result) {
       if (result) {
         res.send(JSON.stringify(result));
       } else {
