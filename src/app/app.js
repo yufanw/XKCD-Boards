@@ -19,7 +19,7 @@ angular.module('app', [])
     <div>
       <nav class="navbar">
         <div class="col-md-6 col-md-offset-3">
-          <h5>XKCD Randomizer</h5>
+          <h2>XKCD Randomizer</h2>
           <button class="btn btn-primary"
             ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
           >Latest</button>

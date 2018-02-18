@@ -1,10 +1,11 @@
 
-h2 {
-  font-family:Lobster;
+h3 {
+  margin-top:2px;
+  font-family:"Centhury Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
-h5 {
-  font-family:Lobster;
+h2 {
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 button {
@@ -48,7 +49,9 @@ textarea {
 }
 
 .alt {
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-style:italic;
+  max-width: 600px;
 }
 
 .btn-comment {
