@@ -71,6 +71,7 @@ textarea {
 }
 
 .comment {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   border-radius:.25rem;
   border:1px solid #007bff;
   width: 50%;
