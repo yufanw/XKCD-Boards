@@ -19,7 +19,7 @@ module.exports = function(router) {
 
   router.post('/comments', function(req, res) {
     Comment.saveComment(req);
-    res.send();
+    res.send(201, JSON.stringify(req));
   });
 
   router.get('/comments', function(req, res) {
