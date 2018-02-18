@@ -6,14 +6,11 @@ var mDatabase = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/comics';
 var cors = require('cors');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
 var router = express.Router();
 var appRoutes = require('./app/routes/api')(router);
 
 app.use(morgan('dev'));
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/src'));
 app.use('/api', appRoutes);
 

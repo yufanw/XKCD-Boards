@@ -20,6 +20,7 @@ module.exports = {
   },
 
   saveComment: function(comment) {
+    console.log(comment);
     var newComment = {
       text: comment.query.text,
       comic_id: comment.query.comic_id
