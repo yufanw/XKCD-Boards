@@ -25,7 +25,6 @@ angular.module('app')
   };
 
   this.postComment = function(text, num, cb) {
-    console.log(text, num);
     $http({
       method: "POST",
       params: {
@@ -44,6 +43,7 @@ angular.module('app')
   };
 
   this.getComments = function(num, cb) {
+    console.log(num);
     $http({
       method: "GET",
       params: {
