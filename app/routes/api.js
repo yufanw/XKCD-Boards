@@ -16,10 +16,6 @@ module.exports = function(router) {
     });
   });
 
-  router.get('/favicon.ico', function(req, res) {
-    res.status(200).send('No favicon');
-  });
-
   router.get('/comics', function(req, res) {
     res.status(200).send('Hello');
   });
