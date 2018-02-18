@@ -24,10 +24,16 @@ angular.module('app')
     });
   };
 
-  this.postComment = function(text, cb) {
+  this.postComment = function(text, num, cb) {
     $http({
       method: "POST",
-      text: text,
+      params: {
+        text: text,
+        comic_id: num
+      },
+      headers: {
+       'Content-Type': 'application/json'
+      },
       url: uri + "api/comments"
     }).then(function success(result) {
       cb(result.data);
@@ -35,5 +41,19 @@ angular.module('app')
       console.log('error', result);
     });
   };
+
+  this.getComments = function(num, cb) {
+    $http({
+      method: "GET",
+      params: {
+        comic_id: num
+      },
+      url: uri + "api/comments"
+    }).then(function success(result) {
+      cb(result.data);
+    }, function error(result) {
+        console.log('error', result);
+      });
+    };
 
 })

@@ -9,18 +9,21 @@ var CommentSchema = new Schema({
 let Comment = mongoose.model('Comment', CommentSchema);
 
 module.exports = {
-  getComments: function(comic) {
-    Comment.find({comic_id: comic.num})
-           .exec((err, results) => {
-            return results;
-           });
+  getComments: function(num, callback) {
+    Comment.find({comic_id: num}, function(err, comments) {
+      if (err) {
+        console.log('Error getting comments');
+      } else {
+        callback(comments);
+      }
+    })
   },
 
   saveComment: function(comment) {
-    comment = JSON.parse(comment);
+    console.log(comment);
     var newComment = {
-      text: comment.text,
-      comic_id: comment.comic_id
+      text: comment.query.text,
+      comic_id: comment.query.comic_id
     };
 
     Comment.create(newComment, function(err) {

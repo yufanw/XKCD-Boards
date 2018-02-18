@@ -64,3 +64,15 @@ textarea {
   display:block;
   margin-top:5px;
 }
+
+.comments {
+  padding-top:7px;
+  margin:4px;
+}
+
+.comment {
+  border-radius:.25rem;
+  border:1px solid #007bff;;
+  width: 50%;
+  min-height: 40px;
+}

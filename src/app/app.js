@@ -9,14 +9,22 @@ angular.module('app', [])
   };
   this.getcomic = getComic;
   this.commentText = '';
+  this.comments = [];
 
   this.setNewComic = (comic) => {
     this.currentComic = comic;
-  }
+    this.setComments();
+  };
 
-  this.addComment = (text) => {
-    this.getcomic.postComment(this.commentText)
-  }
+  this.setNewComments = (comments) => {
+    this.comments = comments;
+  };
+
+  this.setComments = () => {
+    this.getcomic.getComments(this.currentComic.num, this.setNewComments);
+  };
+
+  this.setComments();
 
 })
 .component('appMain', {
@@ -41,7 +49,14 @@ angular.module('app', [])
           ></comics-view>
         </div>
         <div class="col-md-5">
-          <comments-form></comments-form>
+          <comments-form
+            comic="$ctrl.currentComic"
+            comments="$ctrl.setComments"
+            service="$ctrl.getcomic"
+          ></comments-form>
+          <comments-view
+            comments="$ctrl.comments"
+          ></comments-view>
         </div>
       <div>
     </div>
