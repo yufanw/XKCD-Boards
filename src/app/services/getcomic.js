@@ -7,7 +7,7 @@ angular.module('app')
   this.getRandom = function(cb) {
     $http({
       method: "GET",
-      url: uri + "/api/random",
+      url: uri + "api/random",
     }).then(function success(result) {
       cb(result.data);
     }, function error(result) {
@@ -18,7 +18,7 @@ angular.module('app')
   this.getLatest = function(cb) {
     $http({
       method: "GET",
-      url: uri + "/api/latest",
+      url: uri + "api/latest",
     }).then(function success(result) {
       cb(result.data);
     }, function error(result) {
