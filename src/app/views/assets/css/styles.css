@@ -1,14 +1,15 @@
 
 h3 {
   margin-top:2px;
-  font-family:"Centhury Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 h2 {
-  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 button {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   min-width:150px;
   max-width:150px;
   min-height:40px;
@@ -49,7 +50,7 @@ textarea {
 }
 
 .alt {
-  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-style:italic;
   max-width: 600px;
 }

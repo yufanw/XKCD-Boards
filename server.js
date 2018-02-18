@@ -15,7 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/src'));
-app.use(appRoutes);
+app.use('/api', appRoutes);
 
 mongoose.connect(mDatabase, function(err) {
   if (err) {
@@ -26,7 +26,7 @@ mongoose.connect(mDatabase, function(err) {
 });
 
 app.get('*', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
+  res.sendFile(path.join(__dirname + '/public/app/index.html'));
 });
 
 app.listen(PORT, function() {

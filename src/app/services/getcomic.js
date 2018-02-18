@@ -1,11 +1,13 @@
 var XKCD = 'http://xkcd.com';
 
+var uri = window.location.href;
+
 angular.module('app')
 .service('getComic', function($http) {
   this.getRandom = function(cb) {
     $http({
       method: "GET",
-      url: "http://127.0.0.1:8081/random"
+      url: uri + "/api/random",
     }).then(function success(result) {
       cb(result.data);
     }, function error(result) {
@@ -16,7 +18,7 @@ angular.module('app')
   this.getLatest = function(cb) {
     $http({
       method: "GET",
-      url: "http://127.0.0.1:8081/latest",
+      url: uri + "/api/latest",
     }).then(function success(result) {
       cb(result.data);
     }, function error(result) {
