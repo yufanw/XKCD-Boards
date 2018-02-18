@@ -18,8 +18,9 @@ module.exports = function(router) {
   });
 
   router.post('/comments', function(req, res) {
-    console.log(req);
-    Comment.saveComment(req);
+    req.on('end', function() {
+      Comment.saveComment(req);
+    })
     res.sendStatus(201);
   });
 

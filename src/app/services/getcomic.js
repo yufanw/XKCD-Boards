@@ -43,7 +43,6 @@ angular.module('app')
   };
 
   this.getComments = function(num, cb) {
-    console.log(num);
     $http({
       method: "GET",
       params: {
