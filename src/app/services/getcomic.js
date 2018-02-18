@@ -25,6 +25,7 @@ angular.module('app')
   };
 
   this.postComment = function(text, num, cb) {
+    console.log(text, num);
     $http({
       method: "POST",
       params: {
