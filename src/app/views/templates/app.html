@@ -3,7 +3,7 @@
     <div>
       <h2>XKCD BOARDS</h2>
       <button class="btn btn-primary"
-        ng-click="$ctrl.setDefault()"
+        ng-click="$ctrl.goHome()"
       >Home</button>
       <button class="btn btn-primary"
         ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
@@ -17,6 +17,8 @@
     <div class="col-xl-7">
       <comics-view
         comic="$ctrl.currentComic"
+        sethome="$ctrl.setHome"
+        resethome="$ctrl.resetHome"
       ></comics-view>
     </div>
     <div class="col-xl-5">

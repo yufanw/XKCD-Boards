@@ -65,7 +65,7 @@ input {
   max-width: 600px;
 }
 
-.btn-comment {
+.btn-small {
   border-radius:.25rem;
   color:white;
   background-color:#007bff;
@@ -80,25 +80,13 @@ input {
   padding-left:7px;
 }
 
-.btn-comment.hover {
-  border-radius:.25rem;
-  color:white;
-  background-color:#007bff;
-  border-color:#007bff;
-  min-height:30px;
-  max-height:30px;
-  min-width:50px;
-  max-width:50px;
-  margin-bottom:5px;
-}
-
 .comments {
   margin:0 auto;
   display:block;
   border-radius:.25rem;
   border:1px solid #007bff;
   width:75%;
-  height:600px;
+  height:646px;
   overflow:hidden;
   overflow-y:scroll;
 }

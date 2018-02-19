@@ -1,5 +1,11 @@
 <div class="comics">
   <div>
+    <button class="btn btn-primary btn-small"
+      ng-click="$ctrl.handleSetHome()"
+    >Set Home</button>
+    <button class="btn btn-primary btn-small"
+      ng-click="$ctrl.handleResetHome()"
+    >Default</button>
     <div class="imgContainer">
       <img class="imgComic" ng-src={{$ctrl.comic.img}}></img>
     </div>

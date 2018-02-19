@@ -14,6 +14,7 @@ angular.module('app', [])
     alt: 'My new language is great, but it has a few quirks'
   };
   this.currentComic = this.default;
+  this.home = this.default;
   this.getcomic = getComic;
   this.commentText = '';
   this.comments = [];
@@ -27,9 +28,17 @@ angular.module('app', [])
     this.comments = comments;
   };
 
-  this.setDefault = () => {
-    this.currentComic = this.default;
+  this.goHome = () => {
+    this.currentComic = this.home;
     this.setComments();
+  };
+
+  this.setHome = () => {
+    this.home = this.currentComic;
+  };
+
+  this.resetHome = () => {
+    this.home = this.default;
   };
 
   this.setComments = () => {
