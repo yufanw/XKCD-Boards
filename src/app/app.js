@@ -30,7 +30,8 @@ angular.module('app', [])
     this.getcomic.getComments(this.currentComic.num, this.setNewComments);
   };
 
-  this.setComments();
+  let setComments = this.setComments.bind(this);
+  setInterval(function() { setComments() }, 1000);
 
 })
 .component('appMain', {
