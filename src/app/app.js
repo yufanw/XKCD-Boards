@@ -31,6 +31,7 @@ angular.module('app', [])
   };
 
   let setComments = this.setComments.bind(this);
+
   setInterval(function() { setComments() }, 1000);
 
 })
@@ -39,7 +40,7 @@ angular.module('app', [])
   template: `
     <div>
       <nav class="navbar">
-        <div class="col-md-6 col-md-offset-3">
+        <div>
           <h2>XKCD RANDOMIZER</h2>
           <button class="btn btn-primary"
             ng-click="$ctrl.setDefault()"
@@ -53,12 +54,12 @@ angular.module('app', [])
         </div>
       </nav>
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-xl-7">
           <comics-view
             comic="$ctrl.currentComic"
           ></comics-view>
         </div>
-        <div class="col-md-5">
+        <div class="col-xl-5">
           <comments-form
             comic="$ctrl.currentComic"
             comments="$ctrl.setComments"
