@@ -17,12 +17,12 @@ angular.module('app')
   },
   template: `
     <div class=commentsform align=center>
-      <textarea type="text"
+      <input type="text"
         ng-model="$ctrl.commentText"
-      ></textarea>
+      ></input>
       <button class="btn btn-comment"
         ng-click="$ctrl.handleClick()"
-      >Add comment</button>
+      >send</button>
     </div>
   `
 });

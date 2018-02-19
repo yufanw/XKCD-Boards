@@ -1,12 +1,13 @@
 angular.module('app', [])
 .controller('AppCtrl', function(getComic) {
-  this.currentComic = {
+  this.default = {
     img: 'https://imgs.xkcd.com/comics/types.png',
     num: 1537,
     title: 'Types',
     year: '2015',
     alt: 'My new language is great, but it has a few quirks'
   };
+  this.currentComic = this.default;
   this.getcomic = getComic;
   this.commentText = '';
   this.comments = [];
@@ -18,6 +19,11 @@ angular.module('app', [])
 
   this.setNewComments = (comments) => {
     this.comments = comments;
+  };
+
+  this.setDefault = () => {
+    this.currentComic = this.default;
+    this.setComments();
   };
 
   this.setComments = () => {
@@ -33,7 +39,10 @@ angular.module('app', [])
     <div>
       <nav class="navbar">
         <div class="col-md-6 col-md-offset-3">
-          <h2>XKCD Randomizer</h2>
+          <h2>XKCD RANDOMIZER</h2>
+          <button class="btn btn-primary"
+            ng-click="$ctrl.setDefault()"
+          >Home</button>
           <button class="btn btn-primary"
             ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
           >Latest</button>
@@ -58,7 +67,11 @@ angular.module('app', [])
             comments="$ctrl.comments"
           ></comments-view>
         </div>
-      <div>
+      </div>
+      <footer align=center>
+        © Yufan Wang 2018 ||
+        <a href="https://github.com/yufanw/MVP">Source Code</a>
+      </footer>
     </div>
   `
 });
