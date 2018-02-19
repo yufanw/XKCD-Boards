@@ -37,7 +37,7 @@ angular.module('app', [])
   };
 
   let setComments = this.setComments.bind(this);
-  setInterval(function() { setComments() }, 1000);
+  setInterval(function() { setComments() }, 500);
 
 })
 .component('appMain', {
