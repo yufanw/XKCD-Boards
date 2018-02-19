@@ -1,4 +1,4 @@
-# MVP
+# XKCD Boards
 XKCD Viewer created in MEAN stack.
 
 MEAN Stack: MongoDB(Mongoose), ExpressJS, AngularJS, NodeJS.
