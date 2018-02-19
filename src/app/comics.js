@@ -1,5 +1,6 @@
 angular.module('app')
 .controller('comicCtrl', function() {
+
   this.handleSetHome = () => {
     this.sethome();
   };
@@ -11,6 +12,7 @@ angular.module('app')
 .component('comicsView', {
   controller: 'comicCtrl',
   bindings: {
+    home: '<',
     comic: '<',
     sethome: '<',
     resethome: '<',
