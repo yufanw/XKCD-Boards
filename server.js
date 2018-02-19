@@ -1,15 +1,13 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-var PORT = process.env.PORT || 8081;
+var PORT = process.env.PORT || 8080;
 var mDatabase = process.env.MONGODB_URI || 'mongodb://localhost:27017/comics';
 var cors = require('cors');
-var morgan = require('morgan');
 var mongoose = require('mongoose');
 var router = express.Router();
 var appRoutes = require('./app/routes/api')(router);
 
-app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static(__dirname + '/src'));
 app.use('/api', appRoutes);
