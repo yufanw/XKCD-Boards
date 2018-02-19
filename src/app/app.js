@@ -1,7 +1,8 @@
 angular.module('app', [])
 .config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
-    'self'
+    'self',
+    'https://xkcd.com/**'
   ]);
 })
 .controller('AppCtrl', function(getComic) {
