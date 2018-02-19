@@ -15,14 +15,5 @@ angular.module('app')
     comments: '<',
     comic: '<'
   },
-  template: `
-    <div class=commentsform align=center>
-      <input type="text"
-        ng-model="$ctrl.commentText"
-      ></input>
-      <button class="btn btn-comment"
-        ng-click="$ctrl.handleClick()"
-      >send</button>
-    </div>
-  `
+  templateUrl: 'app/views/templates/commentsform.html'
 });

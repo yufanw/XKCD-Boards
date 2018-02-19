@@ -1,4 +1,10 @@
 angular.module('app', [])
+.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'https://xkcd.com/**'
+  ]);
+})
 .controller('AppCtrl', function(getComic) {
   this.default = {
     img: 'https://imgs.xkcd.com/comics/types.png',
@@ -31,49 +37,10 @@ angular.module('app', [])
   };
 
   let setComments = this.setComments.bind(this);
-
   setInterval(function() { setComments() }, 1000);
 
 })
 .component('appMain', {
   controller: 'AppCtrl',
-  template: `
-    <div>
-      <nav class="navbar">
-        <div>
-          <h2>XKCD RANDOMIZER</h2>
-          <button class="btn btn-primary"
-            ng-click="$ctrl.setDefault()"
-          >Home</button>
-          <button class="btn btn-primary"
-            ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
-          >Latest</button>
-          <button class="btn btn-primary"
-            ng-click="$ctrl.getcomic.getRandom($ctrl.setNewComic)"
-          >Random</button>
-        </div>
-      </nav>
-      <div class="row">
-        <div class="col-xl-7">
-          <comics-view
-            comic="$ctrl.currentComic"
-          ></comics-view>
-        </div>
-        <div class="col-xl-5">
-          <comments-form
-            comic="$ctrl.currentComic"
-            comments="$ctrl.setComments"
-            service="$ctrl.getcomic"
-          ></comments-form>
-          <comments-view
-            comments="$ctrl.comments"
-          ></comments-view>
-        </div>
-      </div>
-      <footer align=center>
-        © Yufan Wang 2018 ||
-        <a href="https://github.com/yufanw/MVP">Source Code</a>
-      </footer>
-    </div>
-  `
+  templateUrl: 'app/views/templates/app.html'
 });
