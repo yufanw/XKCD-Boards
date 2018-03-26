@@ -13,8 +13,8 @@
       >Random</button>
     </div>
   </nav>
-  <div class="row">
-    <div class="col-xl-7">
+  <div class="wrapper">
+    <div class="comic-view">
       <comics-view
         comic="$ctrl.currentComic"
         home="$ctrl.home"
@@ -22,7 +22,7 @@
         resethome="$ctrl.resetHome"
       ></comics-view>
     </div>
-    <div class="col-xl-5">
+    <div class="comment-view">
       <comments-form
         comic="$ctrl.currentComic"
         comments="$ctrl.setComments"

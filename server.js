@@ -16,12 +16,12 @@ mongoose.connect(mDatabase, function(err) {
   if (err) {
     console.log('MongoDB not connected', err);
   } else {
-    console.log('Connected to database')
+    console.log('Connected to database');
   }
 });
 
 app.get('*', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/public/app/index.html'));
+  res.sendFile(path.join(__dirname + '/src/index.html'));
 });
 
 app.listen(PORT, function() {
