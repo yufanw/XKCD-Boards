@@ -50,6 +50,7 @@ angular
           this.currentComic.num,
           this.setNewComments
         );
+        this.commentText = "";
       }
     };
 

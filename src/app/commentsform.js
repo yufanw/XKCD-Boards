@@ -3,12 +3,10 @@ angular
   .controller("formCtrl", function() {
     this.handleClick = () => {
       this.post();
-      this.commentText = "";
     };
 
     this.handleKeyUp = () => {
       this.post();
-      this.commentText = "";
     };
   })
   .component("commentsForm", {
@@ -17,7 +15,8 @@ angular
       service: "<",
       comments: "<",
       comic: "<",
-      post: "<"
+      post: "<",
+      text: "<"
     },
     templateUrl: "app/views/templates/commentsform.html"
   });
