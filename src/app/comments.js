@@ -5,7 +5,7 @@ angular.module("app").component("commentsView", {
   template: `
     <div class="comments" align=center>
       <comment-view
-        ng-repeat="comment in $ctrl.comments.slice().reverse() track by comment.id"
+        ng-repeat="comment in $ctrl.comments.slice().reverse() track by comment._id"
         comment="comment"
       ></comment-view>
     </div>
