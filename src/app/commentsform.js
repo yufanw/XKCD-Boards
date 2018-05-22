@@ -14,11 +14,8 @@ angular
     this.postText = () => {
       if (this.commentText) {
         let currentNum = this.comic.num;
-        this.service
-          .postComment(this.commentText, currentNum, this.comments)
-          .then(() => {
-            this.service.getComments();
-          });
+        this.service.postComment(this.commentText, currentNum, this.comments);
+        this.service.getComments();
       }
     };
   })

@@ -43,7 +43,7 @@ angular
       this.getcomic.getComments(this.currentComic.num, this.setNewComments);
     };
 
-    let setComments = this.setComments.bind(this);
+    this.setComments();
   })
   .component("appMain", {
     controller: "AppCtrl",
