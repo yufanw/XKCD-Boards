@@ -44,9 +44,6 @@ angular
     };
 
     let setComments = this.setComments.bind(this);
-    setInterval(function() {
-      setComments();
-    }, 900);
   })
   .component("appMain", {
     controller: "AppCtrl",
