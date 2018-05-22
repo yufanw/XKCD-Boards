@@ -16,7 +16,7 @@ angular
       comments: "<",
       comic: "<",
       post: "<",
-      text: "<"
+      text: "="
     },
     templateUrl: "app/views/templates/commentsform.html"
   });
