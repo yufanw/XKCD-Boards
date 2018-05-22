@@ -45,12 +45,11 @@ angular
 
     this.postText = () => {
       if (this.commentText) {
-        this.service.postComment(
+        this.getcomic.postComment(
           this.commentText,
           this.currentComic.num,
-          this.comments
+          this.setNewComments
         );
-        this.setComments();
       }
     };
 
