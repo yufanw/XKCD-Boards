@@ -43,6 +43,17 @@ angular
       this.getcomic.getComments(this.currentComic.num, this.setNewComments);
     };
 
+    this.postText = () => {
+      if (this.commentText) {
+        this.service.postComment(
+          this.commentText,
+          this.currentComic.num,
+          this.comments
+        );
+        this.setComments();
+      }
+    };
+
     this.setComments();
   })
   .component("appMain", {

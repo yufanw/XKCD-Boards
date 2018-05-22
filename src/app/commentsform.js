@@ -2,21 +2,13 @@ angular
   .module("app")
   .controller("formCtrl", function() {
     this.handleClick = () => {
-      this.postText();
+      this.post();
       this.commentText = "";
     };
 
     this.handleKeyUp = () => {
-      this.postText();
+      this.post();
       this.commentText = "";
-    };
-
-    this.postText = () => {
-      if (this.commentText) {
-        let currentNum = this.comic.num;
-        this.service.postComment(this.commentText, currentNum, this.comments);
-        this.service.getComments();
-      }
     };
   })
   .component("commentsForm", {
@@ -24,7 +16,8 @@ angular
     bindings: {
       service: "<",
       comments: "<",
-      comic: "<"
+      comic: "<",
+      post: "<"
     },
     templateUrl: "app/views/templates/commentsform.html"
   });
