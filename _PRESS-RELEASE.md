@@ -20,7 +20,7 @@ Once the project moves into development, the press release can be used as a touc
   > Webcomic Viewer
 
 ## Sub-Heading ##
-  > A simple app to view an album of web comics
+  > A simple app to view web comics and leave comments
 
 ## Summary ##
   > Users can view latest and random web comics
@@ -29,7 +29,7 @@ Once the project moves into development, the press release can be used as a touc
   > XKCD comics are by default arranged in chronological view, with no way to comment
 
 ## Solution ##
-  > Allow users to view web comics in self created albums instead, and leave comments for the comics
+  > Allow users to view web comics and leave comments for the comics
 
 ## Quote from You ##
   > "Thanks for all the support"
@@ -38,7 +38,7 @@ Once the project moves into development, the press release can be used as a touc
   > Just click and go
 
 ## Customer Quote ##
-  > "I will never see web comcis the same way again"
+  > "I will never see web comics the same way again"
 
 ## Closing and Call to Action ##
   > Head to XKCD.com for more web comics
