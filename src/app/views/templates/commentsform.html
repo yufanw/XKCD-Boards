@@ -1,6 +1,14 @@
 <div class=commentsform align=center>
-  <input type="text"
+  <input 
+    type="text"
+    ng-model="$ctrl.name"
+    placeholder="Name"
+    ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
+  ></input> 
+  <input 
+    type="text"
     ng-model="$ctrl.text"
+    placeholder="Comment"
     ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
   ></input>
   <button class="btn btn-primary btn-small"

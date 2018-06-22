@@ -15,6 +15,7 @@ angular
     this.home = this.default;
     this.getcomic = getComic;
     this.commentText = "";
+    this.commentName = "";
     this.comments = [];
 
     this.setNewComic = comic => {
@@ -45,7 +46,11 @@ angular
 
     this.postText = () => {
       if (this.commentText) {
-        this.getcomic.postComment(this.commentText, this.currentComic.num);
+        this.getcomic.postComment(
+          this.commentName,
+          this.commentText,
+          this.currentComic.num
+        );
         this.commentText = "";
         this.setComments();
       }

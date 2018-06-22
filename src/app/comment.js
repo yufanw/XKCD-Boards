@@ -1,11 +1,10 @@
-angular.module('app')
-.component('commentView', {
+angular.module("app").component("commentView", {
   bindings: {
-    comment: '<',
+    comment: "<"
   },
   template: `
     <div class='comment'>
-      Anonymous: {{$ctrl.comment.text}}
+      {{$ctrl.comment.name || 'Anonymous'}}: {{$ctrl.comment.text}}
     </div>
   `
-})
+});

@@ -29,10 +29,11 @@ angular.module("app").service("getComic", function($http) {
     );
   };
 
-  this.postComment = function(text, num) {
+  this.postComment = function(name, text, num) {
     $http({
       method: "POST",
       params: {
+        name: name,
         text: text,
         comic_id: num
       },
