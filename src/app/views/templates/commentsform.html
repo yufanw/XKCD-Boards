@@ -1,16 +1,24 @@
 <div class=commentsform align=center>
-  <input 
-    type="text"
-    ng-model="$ctrl.name"
-    placeholder="Name"
-    ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
-  ></input> 
-  <input 
-    type="text"
-    ng-model="$ctrl.text"
-    placeholder="Comment"
-    ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
-  ></input>
+  <div class="input-wrapper">
+    <label for="Name">Name:</label>
+    <input
+      id="name"
+      type="text"
+      ng-model="$ctrl.name"
+      placeholder="Name"
+      ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
+    ></input>
+  </div>
+  <div class="input-wrapper">
+    <label for="comment">Comment:</label>
+    <input 
+      id="comment"
+      type="text"
+      ng-model="$ctrl.text"
+      placeholder="Comment"
+      ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
+    ></input>
+  </div>
   <button class="btn btn-primary btn-small"
     ng-click="$ctrl.handleClick()"
   >send</button>

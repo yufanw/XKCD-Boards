@@ -4,15 +4,9 @@ body {
 
 h3 {
   margin-top:2px;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
-
-h2 {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 button {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   min-width:100px;
   max-width:100px;
   min-height:40px;
@@ -101,4 +95,18 @@ input {
 
 .comment-view {
   width: 330px;
+}
+
+.input-wrapper {
+  max-width: 250px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+
+input {
+  width: 100%;
+}
+
+input:focus {
+  border-color: green;
 }

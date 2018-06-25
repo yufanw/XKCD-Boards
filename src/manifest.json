@@ -1,0 +1,14 @@
+{
+  "short_name": "XKCDBoards",
+  "name": "XKCD Comic Viewer with comment streams",
+  "icons": [
+    {
+      "src": "app/views/assets/img.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#007bff",
+  "display": "standalone",
+  "theme_color": "#007bff"
+}
