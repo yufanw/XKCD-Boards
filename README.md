@@ -5,4 +5,4 @@ MEAN Stack: MongoDB(Mongoose), ExpressJS, AngularJS, NodeJS.
 
 This full stack app includes the front and back ends of an XKCD viewer web app.
 
-Deploy: https://xkcd-commentstreams.herokuapp.com/
+Deploy: https://xkcd-boards.herokuapp.com/
