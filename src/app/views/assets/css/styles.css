@@ -1,34 +1,27 @@
 body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 16px;
+  background: rgb(236, 236, 236);
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr 30px;
 }
 
-h3 {
-  margin-top:2px;
+a, .btn {
+  transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
 }
 
-button {
-  min-width:100px;
-  max-width:100px;
-  min-height:40px;
-  max-height:40px;
-}
-
-div.comics {
-  margin:25px;
+nav {
+  background-color: #d3d3d3;
 }
 
 div.imgContainer {
-  border: 1px solid black;
-  height: 650px;
-  width: 650px;
+  background-color: #CBC6B6;
+  min-height: 100%;
+  width: 75vw;
   align-content:center;
   position:relative;
-}
-
-div.commentsform {
-  margin-top:60px;
-  text-align: left;
-  padding-left: 40px;
 }
 
 img.imgComic {
@@ -42,71 +35,171 @@ img.imgComic {
   max-width:99%;
 }
 
-input {
-  border-radius:.25rem;
-  width:60%;
+input, textarea {
+  background-color: rgba(218, 218, 218, 0.8);
+  font-size: 14px;
+  border: 0.1px solid grey;
+  border-right: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+h2 {
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+a:hover {
+  color: lightcoral;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-rows: 45px 1fr;
 }
 
 .alt {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-style:italic;
   max-width: 600px;
 }
 
-.btn-small {
-  border-radius:.25rem;
-  color:white;
-  background-color:#007bff;
-  border-color:#007bff;
-  min-height:30px;
-  max-height:30px;
-  min-width:25%;
-  max-width:25%;
-  margin-bottom:5px;
-  text-align:center;
-  padding-top:1px;
-  padding-left:7px;
+.btn {
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  height: 30px;
+  width: 100%;
+  background-color: dodgerblue;
+  color: lightcyan;
+}
+
+.btn-primary:hover {
+  background-color: lightcyan;
+  color: black;
+}
+
+.btn-form {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.btn-form:hover {
+  background-color: lightblue;
+  color: grey;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 .comments {
-  margin:0 auto;
+  margin:0;
   display:block;
-  border-radius:.25rem;
-  border:1px solid #007bff;
-  width:75%;
-  height:580px;
-  overflow:hidden;
-  overflow-y:scroll;
+  height:100%;
+  overflow-y:auto;
+  background-color: #c2c2c2;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  box-sizing: border-box;
 }
 
 .comment {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   text-align:left;
   padding:5px;
   word-wrap: break-word;
-  border-radius:.25rem;
   min-height: 20px;
+}
+
+.comments-form {
+  height: 100%;
+  border: 0.5px solid grey;
+  box-sizing: border-box;
+}
+
+.nav-content {
+  display: grid;
+  grid-template-columns: repeat(4, max-content) 1fr;
+  grid-gap: 5px;
+  padding-top: 5px;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr minmax(280px, 1fr);
 }
 
 .comment-view {
-  width: 330px;
+  display: grid;
+  grid-template-rows: minmax(400px, 80vh) minmax(120px, 20vh);
 }
 
-.input-wrapper {
-  max-width: 250px;
+.info {
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.comics {
+  height: 100%;
+}
+
+.form-wrapper {
+  height: 100%;
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-rows: min-content 1fr;
+}
+
+.comment-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 50px;
 }
 
 input {
   width: 100%;
 }
 
-input:focus {
-  border-color: green;
+footer {
+  border-top: 0.1px solid #808080;
+  background-color: #d3d3d3;
+  box-sizing: border-box;
 }
+
+@media only screen and (max-width: 768px) {
+  @media only screen and (orientation: landscape) {
+    div.imgContainer {
+      height: 100vw;
+    }
+  }
+  
+  .header {
+    font-size: 20px;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh 40vh;
+  }
+
+  div.imgContainer {
+    width: 100vw;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 12px;
+    height: 25px;
+    bottom: 0;
+  }
+}
+

@@ -1,29 +1,35 @@
-<div>
+<div class="app-wrapper">
   <nav class="navbar">
-    <div>
-      <h2>XKCD BOARDS</h2>
-      <button class="btn btn-primary"
+    <div class="nav-content">
+      <h2 class="header">XKCD BOARDS</h2>
+      <button class="btn btn-primary btn1"
         ng-click="$ctrl.goHome()"
       >Home</button>
-      <button class="btn btn-primary"
+      <button class="btn btn-primary btn2"
         ng-click="$ctrl.getcomic.getLatest($ctrl.setNewComic)"
       >Latest</button>
-      <button class="btn btn-primary"
+      <button class="btn btn-primary btn3"
         ng-click="$ctrl.getcomic.getRandom($ctrl.setNewComic)"
       >Random</button>
     </div>
   </nav>
-  <div class="wrapper">
-    <div class="comic-view">
-      <comics-view
-        comic="$ctrl.currentComic"
-        home="$ctrl.home"
-        sethome="$ctrl.setHome"
-        resethome="$ctrl.resetHome"
-      ></comics-view>
+  <div class="content-wrapper">
+    <div class="info">
+      <h3>{{$ctrl.currentComic.title}}</h3>
+      <div class="alt">'{{$ctrl.currentComic.alt}}'</div>
     </div>
-    <div class="comment-view">
-      <comments-form
+    <div class="wrapper">
+      <div class="comic-view">
+        <comics-view
+          comic="$ctrl.currentComic"
+          home="$ctrl.home"
+        ></comics-view>
+      </div>
+      <div class="comment-view">
+        <comments-view
+          comments="$ctrl.comments"
+        ></comments-view>
+        <comments-form
         comic="$ctrl.currentComic"
         comments="$ctrl.setComments"
         service="$ctrl.getcomic"
@@ -31,9 +37,7 @@
         text="$ctrl.commentText"
         name="$ctrl.commentName"
       ></comments-form>
-      <comments-view
-        comments="$ctrl.comments"
-      ></comments-view>
+      </div>
     </div>
   </div>
 </div>

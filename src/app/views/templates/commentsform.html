@@ -1,6 +1,5 @@
-<div class=commentsform align=center>
-  <div class="input-wrapper">
-    <label for="Name">Name:</label>
+<div class="comments-form">
+  <div class="form-wrapper">
     <input
       id="name"
       type="text"
@@ -8,18 +7,17 @@
       placeholder="Name"
       ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
     ></input>
+    <div class="comment-wrapper">
+      <textarea 
+        id="comment"
+        type="text"
+        ng-model="$ctrl.text"
+        placeholder="Comment"
+        ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
+      ></textarea>
+      <button class="btn btn-form"
+      ng-click="$ctrl.handleClick()"
+      >send</button>
+    </div>
   </div>
-  <div class="input-wrapper">
-    <label for="comment">Comment:</label>
-    <input 
-      id="comment"
-      type="text"
-      ng-model="$ctrl.text"
-      placeholder="Comment"
-      ng-keyup="$event.keyCode === 13 && $ctrl.handleKeyUp()"
-    ></input>
-  </div>
-  <button class="btn btn-primary btn-small"
-    ng-click="$ctrl.handleClick()"
-  >send</button>
 </div>

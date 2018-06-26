@@ -1,19 +1,5 @@
 <div class="comics">
-  <div>
-    <button class="btn btn-primary btn-small"
-      ng-click="$ctrl.handleSetHome()"
-    >Set Home</button>
-    <button class="btn btn-primary btn-small"
-      ng-click="$ctrl.handleResetHome()"
-    >Default</button>
-      Home:
-    <a>{{$ctrl.home.title}}</a>
-    <div class="imgContainer">
-      <img class="imgComic" ng-src={{$ctrl.comic.img}} alt={{$ctrl.comic.alt}}></img>
-    </div>
-    <div>
-      <h3>{{$ctrl.comic.title}}</h3>
-      <div class="alt">'{{$ctrl.comic.alt}}'</div>
-    </div>
+  <div class="imgContainer">
+    <img class="imgComic" ng-src={{$ctrl.comic.img}} alt={{$ctrl.comic.alt}}></img>
   </div>
 </div>
