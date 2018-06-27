@@ -26,17 +26,17 @@
         ></comics-view>
       </div>
       <div class="comment-view">
+        <comments-form
+          comic="$ctrl.currentComic"
+          comments="$ctrl.setComments"
+          service="$ctrl.getcomic"
+          post="$ctrl.postText"
+          text="$ctrl.commentText"
+          name="$ctrl.commentName"
+        ></comments-form>
         <comments-view
           comments="$ctrl.comments"
         ></comments-view>
-        <comments-form
-        comic="$ctrl.currentComic"
-        comments="$ctrl.setComments"
-        service="$ctrl.getcomic"
-        post="$ctrl.postText"
-        text="$ctrl.commentText"
-        name="$ctrl.commentName"
-      ></comments-form>
       </div>
     </div>
   </div>
