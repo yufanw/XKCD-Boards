@@ -80,7 +80,7 @@ a:hover {
 
 .btn-primary {
   height: 30px;
-  width: 100%;
+  min-width: 100%;
   background-color: dodgerblue;
   color: lightcyan;
 }
@@ -163,7 +163,7 @@ a:hover {
 
 .comment-wrapper {
   display: grid;
-  grid-template-columns: 1fr 50px;
+  grid-template-columns: 1fr 60px;
 }
 
 input {
