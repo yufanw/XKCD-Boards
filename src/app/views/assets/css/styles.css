@@ -94,6 +94,7 @@ a:hover {
 .btn-form {
   background-color: dodgerblue;
   color: white;
+  border: 0.5px solid grey;
 }
 
 .btn-form:hover {
@@ -124,6 +125,7 @@ a:hover {
   padding:5px;
   word-wrap: break-word;
   min-height: 20px;
+
 }
 
 .comments-form {
@@ -183,20 +185,26 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  @media only screen and (orientation: landscape) {
-    div.imgContainer {
-      height: 100vw;
-      width: 100vh;
+
+  @media (orientation: portrait) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60vh 40vh;
     }
   }
+
+  .btn {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
   
-  .header {
-    font-size: 1rem;
+  .comment-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 80px;
   }
 
-  .wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 60vh 40vh;
+  .header {
+    font-size: 1rem;
   }
 
   div.imgContainer {
