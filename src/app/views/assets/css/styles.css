@@ -125,7 +125,17 @@ a:hover {
   padding:5px;
   word-wrap: break-word;
   min-height: 20px;
+}
 
+.comment .message {
+  font-family: helvetica;
+  display: inline-block;
+  background-color: rgb(0, 120, 254);;
+  color: white;
+  border-radius: 20px;
+  padding: 0.4em 0.7em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
 }
 
 .comments-form {
