@@ -66,6 +66,7 @@ a:hover {
 .app-wrapper {
   display: grid;
   grid-template-rows: 45px 1fr;
+  height: 100%;
 }
 
 .alt {
