@@ -11,7 +11,7 @@ angular
       year: "2015",
       alt: "My new language is great, but it has a few quirks"
     };
-    this.currentComic = this.home;
+    this.currentComic;
     this.getcomic = getComic;
     this.commentText = "";
     this.commentName = "";
@@ -48,8 +48,11 @@ angular
     };
 
     this.postText = this.postText.bind(this);
+    // Show loader before loading comic;
 
-    this.setComments();
+    setTimeout(() => {
+      this.getcomic.getLatest(this.setNewComic);
+    }, 3500);
   })
   .component("appMain", {
     controller: "AppCtrl",

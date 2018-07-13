@@ -13,9 +13,17 @@
       >Random</button>
     </div>
   </nav>
-  <div class="content-wrapper">
+  <div class="loading-wrapper" ng-if="!$ctrl.currentComic">
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+  </div>
+  <div class="content-wrapper" ng-if="$ctrl.currentComic">
     <div class="info">
-      <h3>{{$ctrl.currentComic.title}}</h3>
+      <h3>{{$ctrl.currentComic.title}} ({{$ctrl.currentComic.year}})</h3>
       <div class="alt">'{{$ctrl.currentComic.alt}}'</div>
     </div>
     <div class="wrapper">
@@ -40,4 +48,5 @@
       </div>
     </div>
   </div>
+
 </div>
