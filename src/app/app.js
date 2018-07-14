@@ -16,10 +16,7 @@ angular
     this.commentText = "";
     this.commentName = "";
     this.comments = [];
-    this.loading = {
-      comments: true,
-      comic: true
-    };
+    this.loading = true;
 
     this.setNewComic = comic => {
       this.currentComic = comic;
@@ -27,7 +24,7 @@ angular
     };
 
     this.setNewComments = comments => {
-      this.loading.comments = false;
+      this.loading = false;
       this.comments = comments;
     };
 
@@ -37,10 +34,14 @@ angular
     };
 
     this.setComments = () => {
-      this.loading.comments = true;
+      this.loading = true;
       this.comments = [];
       this.getcomic.getComments(this.currentComic.num, this.setNewComments);
     };
+
+    this.fetch = () => {
+      this.getcomic.getComments(this.currentComic.num, this.setNewComments);
+    }
 
     this.postText = () => {
       if (this.commentText) {
@@ -50,16 +51,15 @@ angular
           this.currentComic.num
         );
         this.commentText = "";
-        this.setComments();
+        this.fetch();
       }
     };
 
     this.postText = this.postText.bind(this);
 
-    // Show loader before loading comic;
-    setTimeout(() => {
-      this.getcomic.getLatest(this.setNewComic);
-    }, 3600);
+    this.getcomic.getLatest(this.setNewComic);
+
+    setInterval(this.fetch.bind(this), 700);
   })
   .component("appMain", {
     controller: "AppCtrl",
