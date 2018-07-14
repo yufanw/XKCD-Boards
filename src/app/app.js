@@ -59,7 +59,7 @@ angular
     // Show loader before loading comic;
     setTimeout(() => {
       this.getcomic.getLatest(this.setNewComic);
-    }, 0);
+    }, 3600);
   })
   .component("appMain", {
     controller: "AppCtrl",
