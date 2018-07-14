@@ -13,7 +13,7 @@
       >Random</button>
     </div>
   </nav>
-  <div class="loading-wrapper center" ng-if="$ctrl.loading">
+  <div class="loading-wrapper" ng-if="$ctrl.loading">
     <div class="sk-folding-cube">
       <div class="sk-cube1 sk-cube"></div>
       <div class="sk-cube2 sk-cube"></div>
@@ -31,6 +31,7 @@
         <comics-view
           comic="$ctrl.currentComic"
           home="$ctrl.home"
+          delay="$ctrl.delay"
         ></comics-view>
       </div>
 

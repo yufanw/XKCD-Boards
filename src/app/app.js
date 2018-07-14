@@ -17,19 +17,24 @@ angular
     this.commentName = "";
     this.comments = [];
     this.loading = true;
+    this.delay = 500 + (Math.random() * 3500);
 
     this.setNewComic = comic => {
+      this.delay = 500 + (Math.random() * 1500);
       this.currentComic = comic;
       this.setComments();
+      const context = this;
+      setTimeout(() => {
+        context.delay = 0;
+      }, this.delay + 700);
     };
 
     this.setNewComments = comments => {
       this.comments = comments;
       const context = this;
-      const delay = 700 + (Math.random() * 3000);
       setTimeout(() => {
         context.loading = false;
-      }, delay);
+      }, this.delay);
     };
 
     this.goHome = () => {
@@ -61,7 +66,11 @@ angular
 
     this.postText = this.postText.bind(this);
 
-    this.getcomic.getLatest(this.setNewComic);
+    this.getcomic.getLatest((comic) => {
+      this.currentComic = comic;
+      this.setComments();
+      this.delay = 0;
+    });
 
     setInterval(this.fetch.bind(this), 700);
   })

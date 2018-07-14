@@ -16,6 +16,7 @@ angular.module('app')
     comic: '<',
     sethome: '<',
     resethome: '<',
+    delay: '<',
   },
   templateUrl: 'app/views/templates/comics.html'
 })

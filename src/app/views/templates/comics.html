@@ -1,5 +1,15 @@
 <div class="comics">
   <div class="imgContainer">
-    <img class="imgComic" ng-src={{$ctrl.comic.img}} alt={{$ctrl.comic.alt}}></img>
+    <img 
+      class="imgComic" 
+      ng-src={{$ctrl.comic.img}} 
+      alt={{$ctrl.comic.alt}}
+    ></img>
+    <div
+      class="loader-wrapper"
+      ng-if="$ctrl.delay"
+    >
+        <div class="loader"></div>
+    </div>
   </div>
 </div>
