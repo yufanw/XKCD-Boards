@@ -16,6 +16,10 @@ angular
     this.commentText = "";
     this.commentName = "";
     this.comments = [];
+    this.loading = {
+      comments: true,
+      comic: true
+    };
 
     this.setNewComic = comic => {
       this.currentComic = comic;
@@ -23,6 +27,7 @@ angular
     };
 
     this.setNewComments = comments => {
+      this.loading.comments = false;
       this.comments = comments;
     };
 
@@ -32,6 +37,8 @@ angular
     };
 
     this.setComments = () => {
+      this.loading.comments = true;
+      this.comments = [];
       this.getcomic.getComments(this.currentComic.num, this.setNewComments);
     };
 
@@ -48,11 +55,11 @@ angular
     };
 
     this.postText = this.postText.bind(this);
-    // Show loader before loading comic;
 
+    // Show loader before loading comic;
     setTimeout(() => {
       this.getcomic.getLatest(this.setNewComic);
-    }, 3500);
+    }, 0);
   })
   .component("appMain", {
     controller: "AppCtrl",
