@@ -30,7 +30,8 @@ div.imgContainer {
 
 img.imgComic {
   position: absolute;
-  z-index: 0;
+  z-index: 3;
+  background: inherit;
   margin: auto;
   top: 0;
   left: 0;
