@@ -66,3 +66,4 @@ angular.module("app").service("getComic", function($http) {
     );
   };
 });
+

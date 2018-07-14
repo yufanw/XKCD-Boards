@@ -24,8 +24,12 @@ angular
     };
 
     this.setNewComments = comments => {
-      this.loading = false;
       this.comments = comments;
+      const context = this;
+      const delay = 700 + (Math.random() * 3000);
+      setTimeout(() => {
+        context.loading = false;
+      }, delay);
     };
 
     this.goHome = () => {
