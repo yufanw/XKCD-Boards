@@ -44,6 +44,7 @@ angular
     };
 
     this.setComments = () => {
+      this.toggle = false;
       this.loading = true;
       this.comments = [];
       this.getcomic.getComments(this.currentComic.num, this.setNewComments);
