@@ -393,9 +393,6 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    overflow: hidden;
-  }
 
   @media (orientation: portrait) {
     .wrapper {
@@ -441,12 +438,14 @@ footer {
   .comment-view {
     grid-template-rows: 32px minmax(100px, 20%) minmax(50%, 80%);
     width: 100vw;
-    height: 100%;
+    height: 32px;
+    overflow: hidden;
     position: absolute;
     top: calc(100% - 32px);
   }
 
   .comment-view.toggle-comments {
+    height: 100%;
     top: 45px;
   }
 
