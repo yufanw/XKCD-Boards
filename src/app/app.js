@@ -18,6 +18,7 @@ angular
     this.comments = [];
     this.loading = true;
     this.delay = 500 + (Math.random() * 3500);
+    this.toggle = false;
 
     this.setNewComic = comic => {
       this.delay = 500 + (Math.random() * 1500);
@@ -50,7 +51,11 @@ angular
 
     this.fetch = () => {
       this.getcomic.getComments(this.currentComic.num, this.setNewComments);
-    }
+    };
+
+    this.toggleComments = () => {
+      this.toggle = !this.toggle;
+    };
 
     this.postText = () => {
       if (this.commentText) {

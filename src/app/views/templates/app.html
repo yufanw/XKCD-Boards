@@ -35,7 +35,14 @@
         ></comics-view>
       </div>
 
-      <div class="comment-view">
+      <div ng-class="{ 'comment-view toggle-comments' : $ctrl.toggle, 'comment-view' : !$ctrl.toggle }">
+        <div 
+          class="comment-tab"
+          ng-click="$ctrl.toggleComments()"
+        >
+          <span ng-if="!$ctrl.toggle">Open Comments</span>
+          <span ng-if="$ctrl.toggle">Hide Comments</span>
+        </div>
         <comments-form
           comic="$ctrl.currentComic"
           comments="$ctrl.setComments"
@@ -47,7 +54,6 @@
 
         <comments-view
           comments="$ctrl.comments"
-          ng-if="!$ctrl.loading.comments"
         ></comments-view>
       </div>
 
