@@ -5,7 +5,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: 1fr 25px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 a, .btn, .comment-view, span {
@@ -445,7 +445,7 @@ footer {
   }
 
   .comment-view.toggle-comments {
-    height: 100%;
+    height: calc(100% - 45px);
     top: 45px;
   }
 
