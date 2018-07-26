@@ -6,7 +6,7 @@ MEAN Stack: MongoDB(Mongoose), ExpressJS, AngularJS, NodeJS.
 
 ### Getting Started
 
-#### [Deploy](https://xkcd-boards.herokuapp.com/)
+#### [Deployed Link](https://xkcd-boards.herokuapp.com/)
 
 #### Development:
 `npm install`
