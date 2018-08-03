@@ -8,9 +8,14 @@ body {
   height: 100vh;
 }
 
-a, .btn, .comment-view, span {
+a, .btn, .comment-view {
   transition: all 0.4s ease-out;
   -webkit-transition: all 0.4s ease-out;
+}
+
+span {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
 }
 
 nav {
@@ -92,10 +97,10 @@ a:hover {
   height: 30px;
   width: 75px;
   background-color: dodgerblue;
-  color: lightcyan;
+  color: white;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-form:hover {
   background-color: lightcyan;
   color: black;
 }
@@ -104,11 +109,6 @@ a:hover {
   background-color: dodgerblue;
   color: white;
   border: 0.5px solid grey;
-}
-
-.btn-form:hover {
-  background-color: lightblue;
-  color: grey;
 }
 
 .content-wrapper {
@@ -404,30 +404,27 @@ footer {
     padding-left: 1px;
     padding-right: 1px;
   }
-
+  
   .comment-tab {
     display: block;
-    background: rgb(137, 151, 189);
+    background: rgba(137, 151, 189, 0.4);
     color: white;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
+    padding: 1px;
     cursor: pointer;
   }
 
-  .comment-tab {
-    display: block;
-    background: rgb(137, 151, 189);
-    color: white;
-    text-align: center;
-    font-size: 28px;
-  }
-
   .toggle-comments .comment-tab {
-    background: rgb(248, 147, 147);
+    background: rgba(248, 147, 147, 0.5);
   }
 
   .comment-tab:active {
-    background: rgb(248, 147, 147);
+    background: rgba(248, 147, 147, 0.5);
+  }
+
+  .comment-tab:hover span {
+    font-size: 28px;
   }
   
   .comment-wrapper {
@@ -442,6 +439,7 @@ footer {
     overflow: hidden;
     position: absolute;
     top: calc(100% - 32px);
+    background: #d3d3d3;
   }
 
   .comment-view.toggle-comments {

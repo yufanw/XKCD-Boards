@@ -40,8 +40,8 @@
           class="comment-tab"
           ng-click="$ctrl.toggleComments()"
         >
-          <span ng-if="!$ctrl.toggle">Open Comments</span>
-          <span ng-if="$ctrl.toggle">Hide Comments</span>
+          <span ng-if="!$ctrl.toggle"><i class="icon ion-ios-arrow-up"></i></span>
+          <span ng-if="$ctrl.toggle"><i class="icon ion-ios-arrow-down"></i></span>
         </div>
         <comments-form
           comic="$ctrl.currentComic"
