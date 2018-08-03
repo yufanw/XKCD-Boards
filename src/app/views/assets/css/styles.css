@@ -1,11 +1,11 @@
 body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 16px;
-  background: rgb(236, 236, 236);
+  background: rgba(236, 236, 236, 0.5);
   margin: 0;
   display: grid;
   grid-template-rows: 1fr 25px;
-  height: 100vh;
+  min-height: 99vh;
 }
 
 a, .btn, .comment-view {
@@ -19,8 +19,7 @@ span {
 }
 
 nav {
-  background: inherit;
-  border-bottom: 1px solid rgb(187, 187, 187);
+  position: relative;
 }
 
 div.imgContainer {
@@ -76,6 +75,7 @@ a:hover {
   grid-template-rows: 45px 1fr;
   height: 100%;
   position: relative;
+  overflow-y: auto;
 }
 
 .loading-wrapper {
@@ -117,10 +117,10 @@ a:hover {
 }
 
 .comments {
-  margin:0;
-  display:block;
-  height:100%;
-  max-height: 600px;
+  margin: 0;
+  display: block;
+  height: 100%;
+  max-height: 100%;
   overflow-y:auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
@@ -155,10 +155,22 @@ a:hover {
 }
 
 .nav-content {
+  background: rgba(51, 50, 50, 0.7);
+  color: rgba(201, 199, 199, 0.9);
+  padding-left: 4px;
   display: grid;
   grid-template-columns: repeat(4, max-content);
-  grid-gap: 5px;
+  grid-gap: 4px;
   padding-top: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20000;
+  transition: top 0.2s ease-out;
+}
+
+.nav-content.hide {
+  top: -55px;
 }
 
 .wrapper {
@@ -400,6 +412,10 @@ footer {
     }
   }
 
+  .nav-content {
+    height: 40px;
+  }
+
   .btn {
     padding-left: 1px;
     padding-right: 1px;
@@ -443,7 +459,7 @@ footer {
   }
 
   .comment-view.toggle-comments {
-    height: 100%;
+    height: calc(100% - 145px);
     top: 145px;
   }
 

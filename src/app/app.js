@@ -3,7 +3,7 @@ angular
   .config(function($sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist(["self", "https://xkcd.com/**"]);
   })
-  .controller("AppCtrl", function(getComic) {
+  .controller("AppCtrl", function(getComic, $window) {
     this.home = {
       img: "https://imgs.xkcd.com/comics/types.png",
       num: 1537,
@@ -17,11 +17,24 @@ angular
     this.commentName = "";
     this.comments = [];
     this.loading = true;
-    this.delay = 500 + (Math.random() * 3500);
+    this.delay = 500 + Math.random() * 3500;
     this.toggle = false;
+    this.lastScrollTop = 0;
+    this.nav = true;
+
+    const context = this;
+    angular.element($window).bind("scroll", function() {
+      let st = $window.pageYOffset;
+      if (st >= this.lastScrollTop && st >= 5) {
+        context.nav = false;
+      } else {
+        context.nav = true;
+      }
+      this.lastScrollTop = st <= 0 ? 0 : st;
+    });
 
     this.setNewComic = comic => {
-      this.delay = 500 + (Math.random() * 1500);
+      this.delay = 500 + Math.random() * 1500;
       this.currentComic = comic;
       this.setComments();
       const context = this;
@@ -72,7 +85,7 @@ angular
 
     this.postText = this.postText.bind(this);
 
-    this.getcomic.getLatest((comic) => {
+    this.getcomic.getLatest(comic => {
       this.currentComic = comic;
       this.setComments();
       this.delay = 0;

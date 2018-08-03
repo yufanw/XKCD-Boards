@@ -1,6 +1,6 @@
-<div class="app-wrapper">
+<div class="app-wrapper" on-scroll="scrollHdlr($direct,$event)">
   <nav class="navbar">
-    <div class="nav-content">
+    <div ng-class="{ 'nav-content' : $ctrl.nav, 'nav-content hide' : !$ctrl.nav }">
       <h2 class="header">XKCD BOARDS</h2>
       <button class="btn btn-primary btn1"
         ng-click="$ctrl.goHome()"
