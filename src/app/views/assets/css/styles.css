@@ -443,8 +443,8 @@ footer {
   }
 
   .comment-view.toggle-comments {
-    height: calc(100% - 45px);
-    top: 45px;
+    height: 100%;
+    top: 145px;
   }
 
   .header {
