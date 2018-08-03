@@ -1,6 +1,6 @@
 {
-  "name": "mvp",
-  "version": "1.0.0",
+  "name": "xkcd-boards",
+  "version": "2.0.0",
   "author": "Yufan Wang",
   "description": "Generates a random web comic",
   "main": "server.js",
@@ -15,7 +15,7 @@
   "keywords": [
     "xkcd"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yufanw/MVP/issues"
   },
