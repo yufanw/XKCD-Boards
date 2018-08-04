@@ -23,15 +23,20 @@ angular
     this.nav = true;
 
     const context = this;
+
     angular.element($window).bind("scroll", function() {
-      let st = $window.pageYOffset;
+      context.setNav($window);
+    });
+
+    this.setNav = window => {
+      let st = window.pageYOffset;
       if (st >= this.lastScrollTop && st >= 5) {
-        context.nav = false;
+        this.nav = false;
       } else {
-        context.nav = true;
+        this.nav = true;
       }
       this.lastScrollTop = st <= 0 ? 0 : st;
-    });
+    };
 
     this.setNewComic = comic => {
       this.delay = 500 + Math.random() * 1500;
@@ -97,3 +102,19 @@ angular
     controller: "AppCtrl",
     templateUrl: "app/views/templates/app.html"
   });
+
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
