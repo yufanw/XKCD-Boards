@@ -1,30 +1,29 @@
 angular
-  .module("app", [])
+  .module('app', [])
   .config(function($sceDelegateProvider) {
-    $sceDelegateProvider.resourceUrlWhitelist(["self", "https://xkcd.com/**"]);
+    $sceDelegateProvider.resourceUrlWhitelist(['self', 'https://xkcd.com/**']);
   })
-  .controller("AppCtrl", function(getComic, $window) {
+  .controller('AppCtrl', function(getComic, $window) {
     this.home = {
-      img: "https://imgs.xkcd.com/comics/types.png",
+      img: 'https://imgs.xkcd.com/comics/types.png',
       num: 1537,
-      title: "Types",
-      year: "2015",
-      alt: "My new language is great, but it has a few quirks"
+      title: 'Types',
+      year: '2015',
+      alt: 'My new language is great, but it has a few quirks',
     };
     this.currentComic;
     this.getcomic = getComic;
-    this.commentText = "";
-    this.commentName = "";
+    this.commentText = '';
+    this.commentName = '';
     this.comments = [];
     this.loading = true;
-    this.delay = 500 + Math.random() * 3500;
     this.toggle = false;
     this.lastScrollTop = 0;
     this.nav = true;
 
     const context = this;
 
-    angular.element($window).bind("scroll", function() {
+    angular.element($window).bind('scroll', function() {
       context.setNav($window);
     });
 
@@ -39,13 +38,8 @@ angular
     };
 
     this.setNewComic = comic => {
-      this.delay = 500 + Math.random() * 1500;
       this.currentComic = comic;
       this.setComments();
-      const context = this;
-      setTimeout(() => {
-        context.delay = 0;
-      }, this.delay + 700);
     };
 
     this.setNewComments = comments => {
@@ -83,7 +77,7 @@ angular
           this.commentText,
           this.currentComic.num
         );
-        this.commentText = "";
+        this.commentText = '';
         this.fetch();
       }
     };
@@ -98,9 +92,9 @@ angular
 
     setInterval(this.fetch.bind(this), 700);
   })
-  .component("appMain", {
-    controller: "AppCtrl",
-    templateUrl: "app/views/templates/app.html"
+  .component('appMain', {
+    controller: 'AppCtrl',
+    templateUrl: 'app/views/templates/app.html',
   });
 
 function debounce(func, wait, immediate) {

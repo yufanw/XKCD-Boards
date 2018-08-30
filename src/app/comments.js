@@ -1,9 +1,9 @@
-angular.module("app").component("commentsView", {
+angular.module('app').component('commentsView', {
   bindings: {
-    comments: "<"
+    comments: '<',
   },
   template: `
-    <div class="comments" align=center>
+    <div class="comments">
 
       <div
         ng-if="!$ctrl.comments.length"
@@ -18,5 +18,5 @@ angular.module("app").component("commentsView", {
       ></comment-view>
 
     </div>
-  `
+  `,
 });
