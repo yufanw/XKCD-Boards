@@ -1,12 +1,12 @@
 # XKCD Boards
 XKCD Viewer created in MEAN stack.
 
-MEAN Stack: MongoDB(Mongoose), ExpressJS, AngularJS, NodeJS.
-
+MongoDB(Mongoose), ExpressJS, AngularJS, NodeJS.
 
 ### Getting Started
 
 #### [Deployed Link](https://xkcd-boards.herokuapp.com/)
+#### [MVP Version(Made Feb 2018)](https://xkcd-board-legacy.herokuapp.com/)
 
 #### Development:
 `npm install`
