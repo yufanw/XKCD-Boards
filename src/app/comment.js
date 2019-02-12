@@ -4,7 +4,9 @@ angular.module("app").component("commentView", {
   },
   template: `
     <div class='comment'>
-      {{$ctrl.comment.name || 'Anonymous'}}: 
+      <div class="comment-name">
+        {{$ctrl.comment.name || 'anonymous'}}: 
+      </div>
       <div class="message">
         {{$ctrl.comment.text}}
       </div>

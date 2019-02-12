@@ -98,6 +98,7 @@ a:hover {
   width: 75px;
   background-color: dodgerblue;
   color: white;
+  outline: none;
 }
 
 .btn-primary:hover, .btn-form:hover {
@@ -123,10 +124,7 @@ a:hover {
   max-height: 600px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
   background-color: #e4e4e4;
-  border-top: 1px solid grey;
-  border-left: 1px solid grey;
   box-sizing: border-box;
 }
 
@@ -139,23 +137,25 @@ a:hover {
   padding:5px;
   word-wrap: break-word;
   min-height: 20px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.comment .comment-name {
+  margin-right: 10px;
 }
 
 .comment .message {
   font-family: helvetica;
   display: inline-block;
-  background-color: rgb(0, 120, 254);;
+  background-color: rgba(0, 119, 254);;
   color: white;
-  border-radius: 20px;
-  padding: 0.4em 0.7em;
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
+  border-radius: 8px;
+  padding: 6px 8px;
 }
 
 .comments-form {
   height: 100%;
-  border: 0.5px solid rgba(75, 75, 75, 0.7);
-  box-sizing: border-box;
 }
 
 .nav-content {
