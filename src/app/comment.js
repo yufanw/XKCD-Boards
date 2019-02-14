@@ -8,7 +8,9 @@ angular.module("app").component("commentView", {
         {{$ctrl.comment.name || 'anonymous'}}: 
       </div>
       <div class="message">
-        {{$ctrl.comment.text}}
+        <div class="text">
+          {{$ctrl.comment.text}}
+        </div>
       </div>
     </div>
   `
